@@ -1,0 +1,14 @@
+pipeline {
+	agent any
+	parameters {
+		choice(name : 'choice_1', 
+			choices : 'one\ntwo\nthree\nfour',
+			description : 'what your choice')
+		booleanParam(name : 'choice_2', 
+			defaultValue: true,
+			description : 'Are you male')
+		string (name : 'input_3', 
+			defaultValue: "Example string",
+			description : 'input from teto')
+	}
+}
