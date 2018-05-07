@@ -29,7 +29,7 @@ public class main {
             mons[m][0] = String.format(format, name, "");
             mons[m][1] = " Su Mo Tu We Th Fr Sa";
             int dim = date.getActualMaximum(Calendar.DAY_OF_MONTH);
- 
+
             for (int d = 1; d < 43; d++) {
                 boolean isDay = d > offs && d <= offs + dim;
                 String entry = isDay ? String.format(" %2s", d - offs) : "   ";
@@ -42,7 +42,6 @@ public class main {
             date.add(Calendar.MONTH, 1);
         }
  
-        System.out.printf("%" + (w / 2 + 10) + "s%n", "[Snoopy Picture]");
         System.out.printf("%" + (w / 2 + 4) + "s%n%n", year);
  
         for (int r = 0; r < nRows; r++) {
